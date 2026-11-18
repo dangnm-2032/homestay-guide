@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dang Homestay · Guest Guide</title>
+<meta name="description" content="Hướng dẫn cho khách: nội quy, Wi-Fi, ăn uống, tham quan quanh Quận 1. Guest guide: house rules, Wi-Fi, food and sights near District 1.">
+<meta name="theme-color" content="#FF7A45">
+<meta property="og:title" content="Dang Homestay · Guest Guide">
+<meta property="og:description" content="House rules, Wi-Fi, food and sights near District 1, Saigon.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF7A45'/%3E%3Cpath d='M14 34 32 18l18 16v14H14z' fill='%232B1B12'/%3E%3Crect x='27' y='36' width='10' height='12' fill='%23FFC23D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <div class="bar-row">
+      <div class="brand">Dang Homestay</div>
+      <div class="lang" role="group" aria-label="Ngôn ngữ / Language">
+        <button type="button" id="lang-vi" aria-pressed="true">VI</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+    <nav class="chips" aria-label="Mục lục / Sections">
+      <a href="#rules"><span class="vi">Nội quy</span><span class="en">House rules</span></a>
+      <a href="#room"><span class="vi">Trong nhà</span><span class="en">In the house</span></a>
+      <a href="#food"><span class="vi">Ăn uống</span><span class="en">Food</span></a>
+      <a href="#coffee"><span class="vi">Cà phê & bar</span><span class="en">Coffee & bars</span></a>
+      <a href="#sights"><span class="vi">Tham quan</span><span class="en">Sights</span></a>
+      <a href="#transport"><span class="vi">Di chuyển</span><span class="en">Getting around</span></a>
+      <a href="#tips"><span class="vi">Mẹo</span><span class="en">Tips</span></a>
+      <a href="#sos"><span class="vi">Khẩn cấp</span><span class="en">Emergency</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="vi">Trung tâm Sài Gòn · Quận 1 cũ</span><span class="en">Central Saigon · old District 1</span></div>
+    <h1><span class="vi">Chào mừng bạn về nhà.</span><span class="en">Welcome home.</span></h1>
+    <p><span class="vi">Mọi thứ bạn cần cho kỳ nghỉ: nội quy, cách dùng đồ trong nhà và những chỗ ăn chơi quanh đây.</span><span class="en">Everything for your stay: house rules, how things work, and where to eat and explore nearby.</span></p>
+    <div class="facts">
+      <div class="fact"><div class="k"><span class="vi">Nhận phòng từ</span><span class="en">Check-in from</span></div><div class="vi v">15:00</div><div class="en v">3:00 PM</div></div>
+      <div class="fact"><div class="k"><span class="vi">Trả phòng trước</span><span class="en">Check-out by</span></div><div class="vi v">12:00</div><div class="en v">12:00 PM</div></div>
+    </div>
+    <div class="wifi">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0M12 20h.01"/></svg></div>
+      <div class="txt">
+        <div class="lbl">Wi-Fi: <span id="wifi-name">At home VT</span></div>
+        <div class="val" id="wifi-pass">Guinness</div>
+      </div>
+      <button type="button" class="btn" id="copy-wifi"><span class="vi">Sao chép mật khẩu</span><span class="en">Copy password</span></button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <section id="rules">
+      <h2><span class="vi">Nội quy</span><span class="en">House rules</span></h2>
+      <p class="lead"><span class="vi">Cảm ơn bạn đã cùng giữ nơi này yên tĩnh, sạch sẽ và an toàn.</span><span class="en">Thanks for helping keep this home quiet, clean and safe.</span></p>
+      <div class="rules" id="rules-list"></div>
+    </section>
+
+    <section id="room">
+      <h2><span class="vi">Trong nhà</span><span class="en">In the house</span></h2>
+      <div class="grid2" id="room-list"></div>
+    </section>
+
+    <section id="food">
+      <h2><span class="vi">Ăn uống</span><span class="en">Where to eat</span></h2>
+      <p class="lead"><span class="vi">Nên thử phở, bánh mì, cơm tấm, bánh xèo, hủ tiếu. Quán đánh dấu Bib là quán Michelin Bib Gourmand.</span><span class="en">Try phở, bánh mì, broken rice, crispy pancakes and hủ tiếu. "Bib" marks a Michelin Bib Gourmand pick.</span></p>
+      <div class="list" id="food-list"></div>
+      <p class="note"><span class="vi">Giờ mở cửa có thể thay đổi, kiểm tra Google Maps trước khi đi.</span><span class="en">Hours can change, so check Google Maps before you go.</span></p>
+    </section>
+
+    <section id="coffee">
+      <h2><span class="vi">Cà phê & về đêm</span><span class="en">Coffee & nightlife</span></h2>
+      <p class="lead"><span class="vi">Gọi thử cà phê sữa đá, cà phê dừa hoặc cà phê muối. Rooftop đẹp nhất lúc hoàng hôn, khoảng 17:30–18:30.</span><span class="en">Order an iced milk coffee, coconut coffee or salted coffee. Rooftops are best at sunset, around 5:30–6:30 PM.</span></p>
+      <h3 class="sub"><span class="vi">Cà phê</span><span class="en">Cafés</span></h3>
+      <div class="list" id="cafe-list"></div>
+      <h3 class="sub"><span class="vi">Rooftop & bar</span><span class="en">Rooftops & bars</span></h3>
+      <div class="list" id="bar-list"></div>
+    </section>
+
+    <section id="sights">
+      <h2><span class="vi">Tham quan</span><span class="en">Sights</span></h2>
+      <p class="lead"><span class="vi">Đi bộ một vòng: Nhà thờ Đức Bà → Bưu điện → đường sách → Nhà hát → phố đi bộ Nguyễn Huệ. Dinh Độc Lập và Bảo tàng Chứng tích nên đi buổi sáng.</span><span class="en">One easy walk: Notre-Dame → Post Office → Book Street → Opera House → Nguyễn Huệ walking street. Visit the Independence Palace and War Remnants Museum in the morning.</span></p>
+      <div class="list" id="sight-list"></div>
+      <h3 class="sub"><span class="vi">Tour trong ngày</span><span class="en">Day trips</span></h3>
+      <div class="grid2" id="trip-list"></div>
+      <p class="note"><span class="vi">Giá tham khảo theo tour ghép đoàn. Hỏi chủ nhà nếu cần đặt tour.</span><span class="en">Indicative group-tour prices. Ask your host if you'd like help booking.</span></p>
+    </section>
+
+    <section id="transport">
+      <h2><span class="vi">Di chuyển</span><span class="en">Getting around</span></h2>
+      <p class="lead"><span class="vi">Gọi xe qua Grab, Xanh SM hoặc Be: giá hiện trước, không cần trả giá. Sân bay cách đây khoảng 8 km, 30–40 phút.</span><span class="en">Use Grab, Xanh SM or Be: the fare is shown upfront. The airport is about 8 km away, 30–40 minutes.</span></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th><span class="vi">Phương tiện</span><span class="en">Option</span></th><th><span class="vi">Giá tham khảo</span><span class="en">Approx. fare</span></th><th><span class="vi">Ghi chú</span><span class="en">Note</span></th></tr></thead>
+          <tbody id="transport-list"></tbody>
+        </table>
+      </div>
+      <p class="note"><span class="vi">Chỉ đi taxi ở hàng taxi chính thức; cẩn thận hãng giả tên gần giống (“Vinasum”, “Mai Linhh”).</span><span class="en">Only take taxis from the official rank, and watch for look-alike brands (“Vinasum”, “Mai Linhh”).</span></p>
+    </section>
+
+    <section id="tips">
+      <h2><span class="vi">Mẹo nhỏ</span><span class="en">Good to know</span></h2>
+      <ul class="tips" id="tip-list"></ul>
+      <h3 class="sub"><span class="vi">Vài câu tiếng Việt hữu ích</span><span class="en">Handy Vietnamese</span></h3>
+      <div class="phrases" id="phrase-list"></div>
+    </section>
+
+    <section id="sos">
+      <h2><span class="vi">Khẩn cấp</span><span class="en">Emergency</span></h2>
+      <div class="host">
+        <div class="k"><span class="vi">Chủ nhà · 24/7</span><span class="en">Your host · 24/7</span></div>
+        <div class="v">Đăng · Zalo/Whatsapp +84888835538</div>
+      </div>
+      <div class="sos">
+        <a href="tel:115"><span class="n">115</span><span class="l"><span class="vi">Cấp cứu</span><span class="en">Ambulance</span></span></a>
+        <a href="tel:113"><span class="n">113</span><span class="l"><span class="vi">Công an</span><span class="en">Police</span></span></a>
+        <a href="tel:114"><span class="n">114</span><span class="l"><span class="vi">Cứu hỏa</span><span class="en">Fire</span></span></a>
+      </div>
+      <h3 class="sub"><span class="vi">Phòng khám nói tiếng Anh</span><span class="en">English-speaking clinics</span></h3>
+      <div class="list" id="clinic-list"></div>
+    </section>
+
+  </div>
+</main>
+
+<footer><div class="wrap"><span class="vi">Dang Homestay · Cập nhật 11/2026</span><span class="en">Dang Homestay · Updated Nov 2026</span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
